@@ -2,6 +2,7 @@
 
 import argparse
 import asyncio
+import os
 import sys
 from pathlib import Path
 
@@ -27,6 +28,7 @@ async def main() -> None:
     params = StdioServerParameters(
         command=sys.executable,
         args=[str(Path(__file__).with_name("mcp_server.py"))],
+        env=os.environ.copy(),
     )
     provider = OllamaProvider(model=args.model, base_url=args.url)
     logger = JsonlLogger()

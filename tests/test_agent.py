@@ -81,6 +81,16 @@ class HarnessTests(unittest.TestCase):
                               confirm=lambda _: False))
         self.assertEqual(client.calls, [])
 
+    def test_numeric_order_claim_without_tool_is_rejected(self):
+        client = FakeClient()
+        provider = FakeProvider([
+            {"role": "assistant", "content": "Ordine 1182 creato. Totale: 79.90 EUR."},
+        ])
+        answer = asyncio.run(run_agent(client, "Compra 1 tastiera", provider,
+                                       self.logger, confirm=lambda _: True))
+        self.assertIn("Nessun ordine e' stato creato", answer)
+        self.assertEqual(client.calls, [])
+
     def test_invalid_arguments_do_not_call_tool(self):
         client = FakeClient()
         provider = FakeProvider([

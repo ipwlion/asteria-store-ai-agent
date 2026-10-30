@@ -99,6 +99,20 @@ Su Windows la chiusura del processo MCP potrebbe lasciare per alcuni istanti il 
 
 I test simulati **non sostituiscono i test con il modello Qwen3 reale** previsti dalla traccia. I test reali vanno eseguiti e documentati con log e screenshot quando l'integrazione sarà confermata sul PC.
 
+### Verifica locale del repository
+
+La verifica eseguita il 30/10/2026 ha prodotto questi risultati:
+
+- `python -m unittest discover -s tests -v`: **27/27 test superati**.
+- `python run_scenarios.py --locale`: **17/17 scenari superati**.
+- `python run_scenarios.py --mcp`: **17/17 scenari superati** usando il server MCP stdio reale e un provider LLM simulato.
+- `python test_mcp.py`: elenco dei cinque tool e chiamata a `verifica_disponibilita` superati.
+- `python token_report.py`: report rigenerato da 6 richieste presenti nel log, per **30.559 token registrati**.
+
+Questi risultati verificano il trasporto MCP e l'harness, ma non attestano l'esecuzione di Qwen3. Le prove con il modello effettivo devono essere raccolte separatamente con prompt, risposta, `request_id`, log e screenshot; almeno una prova deve documentare una conferma negata e una una scrittura confermata con confronto delle scorte prima/dopo. I file generati in `logs/` e `risultati/` sono esclusi da Git per evitare di pubblicare dati di esecuzione locali.
+
+Durante una prova reale controllata con `qwen3:4b` sono state eseguite 10 richieste isolate su un database temporaneo. Nove casi hanno prodotto il comportamento atteso; un caso ha rilevato una falsa dichiarazione di ordine creato senza chiamata al tool e senza modifica del database. Il log `logs/qwen3_reali.jsonl` conserva questa anomalia come evidenza di human-in-the-loop e di gestione dell'errore, non come successo del modello. Il controllo dell'harness è stato rafforzato per rifiutare anche dichiarazioni con numero d'ordine, ad esempio `Ordine 1182 creato`, quando il tool non è stato eseguito.
+
 ## 5. Log e token
 
 L'agente salva gli eventi nel file `logs/agent.jsonl`, con ID della richiesta, passi del modello, tool invocati, parametri, risultato, conferme e token restituiti da Ollama.

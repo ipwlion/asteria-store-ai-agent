@@ -284,7 +284,10 @@ async def run_agent(
                 )})
                 continue
             # L'LLM non puo' dichiarare riuscita una scrittura inesistente.
-            if not writes_executed and re.search(r"\b(?:ordine (?:creato|registrato|effettuato|completato)|acquisto (?:effettuato|completato))\b", answer.casefold()):
+            if not writes_executed and re.search(
+                    r"\b(?:ordine(?:\s+\d+)?\s+(?:creato|registrato|effettuato|completato)"
+                    r"|acquisto\s+(?:effettuato|completato))\b",
+                    answer.casefold()):
                 answer = "Nessun ordine e' stato creato: il tool crea_ordine non e' stato eseguito. Riformula la richiesta."
                 logger.write("model_unverified_write_claim", step=step)
             if writes_denied:
