@@ -1,0 +1,65 @@
+﻿sku;name;category;price_cents;stock;min_stock
+SKU-001;Tastiera meccanica;Tastiere;7990;12;8
+SKU-007;Tastiera compatta wireless;Tastiere;6490;19;8
+SKU-008;Tastiera ergonomica;Tastiere;8990;11;8
+SKU-009;Tastiera slim USB;Tastiere;2490;42;8
+SKU-010;Tastiera gaming RGB;Tastiere;9990;16;8
+SKU-011;Tastiera Bluetooth multi-dispositivo;Tastiere;7490;8;8
+SKU-012;Tastiera numerica esterna;Tastiere;1990;30;8
+SKU-013;Tastiera silenziosa da ufficio;Tastiere;3990;25;8
+SKU-002;Mouse wireless;Mouse;2990;25;8
+SKU-014;Mouse ergonomico verticale;Mouse;4490;15;8
+SKU-015;Mouse gaming;Mouse;5990;20;8
+SKU-016;Mouse USB ottico;Mouse;1490;50;8
+SKU-017;Mouse Bluetooth;Mouse;3490;33;8
+SKU-018;Mouse compatto da viaggio;Mouse;2290;27;8
+SKU-019;Trackball wireless;Mouse;6990;6;8
+SKU-020;Mouse silenzioso;Mouse;2790;31;8
+SKU-003;Monitor 24 pollici;Monitor;15900;7;5
+SKU-021;Monitor 27 pollici IPS;Monitor;22900;11;5
+SKU-022;Monitor 32 pollici 4K;Monitor;39900;5;5
+SKU-023;Monitor portatile USB-C;Monitor;18900;9;5
+SKU-024;Monitor ultrawide 34 pollici;Monitor;49900;3;5
+SKU-025;Monitor gaming 165Hz;Monitor;27900;13;5
+SKU-026;Monitor professionale QHD;Monitor;34900;6;5
+SKU-027;Monitor 22 pollici;Monitor;12900;17;5
+SKU-004;Cuffie USB;Audio;4950;15;8
+SKU-028;Cuffie Bluetooth;Audio;8990;12;8
+SKU-029;Auricolari wireless;Audio;5490;22;8
+SKU-030;Microfono da tavolo USB;Audio;6990;14;8
+SKU-031;Casse stereo compatte;Audio;3990;18;8
+SKU-032;Headset call center;Audio;5990;10;8
+SKU-033;Soundbar per monitor;Audio;7990;8;8
+SKU-034;Microfono lavalier;Audio;2990;26;8
+SKU-005;Webcam HD;Video;3990;9;8
+SKU-035;Webcam Full HD;Video;6990;16;8
+SKU-036;Webcam 4K;Video;14900;6;5
+SKU-037;Luce LED per videochiamate;Video;2990;35;8
+SKU-038;Supporto webcam;Video;1590;29;8
+SKU-039;Videocamera per sale riunioni;Video;27900;4;5
+SKU-040;Treppiede da scrivania;Video;1990;32;8
+SKU-041;Scheda acquisizione HDMI;Video;7990;10;8
+SKU-006;Hub USB-C;Accessori;2490;18;8
+SKU-042;Docking station USB-C;Accessori;13900;9;5
+SKU-043;Adattatore HDMI USB-C;Accessori;1890;39;8
+SKU-044;Cavo USB-C 2 metri;Accessori;1290;60;8
+SKU-045;Supporto notebook;Accessori;3490;27;8
+SKU-046;Tappetino mouse XL;Accessori;1990;38;8
+SKU-047;Borsa notebook 15 pollici;Accessori;3990;20;8
+SKU-048;Alimentatore USB-C 65W;Accessori;4990;21;8
+SKU-049;SSD esterno 1TB;Archiviazione;9990;16;8
+SKU-050;SSD interno 500GB;Archiviazione;5990;18;8
+SKU-051;SSD interno 2TB;Archiviazione;15900;9;5
+SKU-052;Chiavetta USB 64GB;Archiviazione;1490;45;8
+SKU-053;Chiavetta USB 128GB;Archiviazione;2290;41;8
+SKU-054;Scheda microSD 256GB;Archiviazione;3490;23;8
+SKU-055;Hard disk esterno 2TB;Archiviazione;8990;13;8
+SKU-056;Box esterno SSD;Archiviazione;2490;32;8
+SKU-057;Router Wi-Fi 6;Rete;11900;12;5
+SKU-058;Router Wi-Fi mesh;Rete;18900;8;5
+SKU-059;Switch Ethernet 8 porte;Rete;4990;17;8
+SKU-060;Switch Ethernet 16 porte;Rete;11900;11;5
+SKU-061;Adattatore Wi-Fi USB;Rete;1990;34;8
+SKU-062;Cavo Ethernet 5 metri;Rete;1090;49;8
+SKU-063;Access point Wi-Fi;Rete;9900;14;8
+SKU-064;Adattatore Ethernet USB-C;Rete;2290;28;8
