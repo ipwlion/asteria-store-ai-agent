@@ -113,6 +113,13 @@ Questi risultati verificano il trasporto MCP e l'harness, ma non attestano l'ese
 
 Durante una prova reale controllata con `qwen3:4b` sono state eseguite 10 richieste isolate su un database temporaneo. Nove casi hanno prodotto il comportamento atteso; un caso ha rilevato una falsa dichiarazione di ordine creato senza chiamata al tool e senza modifica del database. Il log `logs/qwen3_reali.jsonl` conserva questa anomalia come evidenza di human-in-the-loop e di gestione dell'errore, non come successo del modello. Il controllo dell'harness è stato rafforzato per rifiutare anche dichiarazioni con numero d'ordine, ad esempio `Ordine 1182 creato`, quando il tool non è stato eseguito.
 
+### Guasto controllato del tool MCP
+Per verificare la gestione degli errori con il server MCP e il modello Qwen3 reali,
+lo script prova_errore_tool.py introduce una sola eccezione simulata in una chiamata a
+verifica_disponibilita. Dal terminale: .\.venv\Scripts\python.exe prova_errore_tool.py
+Lo script salva un log locale in logs/prova_errore_tool.jsonl, non pubblicato nel repository.
+Non si tratta di un guasto spontaneo dell'applicazione, ma di un test ripetibile.
+
 ## 5. Log e token
 
 L'agente salva gli eventi nel file `logs/agent.jsonl`, con ID della richiesta, passi del modello, tool invocati, parametri, risultato, conferme e token restituiti da Ollama.
@@ -124,6 +131,7 @@ Per creare il report CSV dei consumi effettivi:
 ```
 
 Il file risultante è `risultati/consumi_token.csv`. Il modello locale non genera un costo a consumo API; la stima economica nella relazione si baserà su ipotesi dichiarate (hardware, energia e tempo dell'operatore).
+
 
 ## 6. File principali
 
